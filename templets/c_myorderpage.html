@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'c_myorderpage.css' %}">
+    <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart-Section</title>
+</head>
+<body>
+
+    <div class="cartnav">
+        <img src="logo2.png"  class="logo" alt="">
+
+    </div>
+
+
+
+<div class="cartitems">
+
+    <div class="my-shopping-bag">
+        <h1>My Orders(3)</h1>
+
+        <div class="cartproduct">
+            <img src="product-2.jpg" alt="">
+
+
+            <div class="patana">
+                <h1>Blue Boyfriend Jeans</h1>
+            <div class="cart-product-detail">
+            <div class="cartdetail">
+
+                <p>color: <span>Blue</span></p>
+        <p>Size: <span>XL</span></p>
+            <p>Qty: <span>1</span></p>
+
+            <p style="color:green;">Arriving on <span>23 jan</span></p>
+
+        </div>
+        <div class="smallprice">₹3433 <s style="color:#EA7186">₹3288</s></div>
+        </div>
+        <div class="pricio">
+            <h1 class="priceee" onclick="location.href='/cancelorder'">Cancel</h1>
+            <h1 class="remove" style="background-color:#fc637c ;color:white;" onclick="location.href='/trackorder'">Track</h1>
+
+        </div>
+            </div>
+
+        <h4><s style="  color: #EA7186;font-size: 1rem;">₹3332</s>₹1500</h4>
+
+        <div class="pricio2">
+            <h1 class="priceee">Cancel</h1>
+            <h1 class="remove" style="background-color:#fc637c ;color:white;" onclick="location.href='/trackorder'">Track</h1>
+        </div>
+            </div>
+
+
+            <div class="cartproduct">
+                <img src="product-2.jpg" alt="">
+
+
+                <div class="patana">
+                    <h1>Blue Boyfriend Jeans</h1>
+                <div class="cart-product-detail">
+                <div class="cartdetail">
+
+                    <p>color: <span>Blue</span></p>
+            <p>Size: <span>XL</span></p>
+                <p>Qty: <span>1</span></p>
+
+                <p style="color:green;">Arriving on <span>23 jan</span></p>
+
+            </div>
+            <div class="smallprice">₹3433 <s style="color:#EA7186">₹3288</s></div>
+            </div>
+            <div class="pricio">
+                <h1 class="priceee" onclick="location.href='/cancelorder'">Cancel</h1>
+                <h1 class="remove" style="background-color:#fc637c ;color:white;">Track</h1>
+
+            </div>
+                </div>
+
+            <h4><s style="  color: #EA7186;font-size: 1rem;">₹3332</s>₹1500</h4>
+
+            <div class="pricio2">
+                <h1 class="priceee">Cancel</h1>
+                <h1 class="remove" style="background-color:#fc637c ;color:white;">Track</h1>
+            </div>
+                </div>
+                <div class="cartproduct">
+                    <img src="product-2.jpg" alt="">
+
+
+                    <div class="patana">
+                        <h1>Blue Boyfriend Jeans</h1>
+                    <div class="cart-product-detail">
+                    <div class="cartdetail">
+
+                        <p>color: <span>Blue</span></p>
+                <p>Size: <span>XL</span></p>
+                    <p>Qty: <span>1</span></p>
+
+                    <p style="color:green;">Arriving on <span>23 jan</span></p>
+
+                </div>
+                <div class="smallprice">₹3433 <s style="color:#EA7186">₹3288</s></div>
+                </div>
+                <div class="pricio">
+                    <h1 class="priceee">Cancel</h1>
+                    <h1 class="remove" style="background-color:#fc637c ;color:white;">Track</h1>
+
+                </div>
+                    </div>
+
+                <h4><s style="  color: #EA7186;font-size: 1rem;">₹3332</s>₹1500</h4>
+
+                <div class="pricio2">
+                    <h1 class="priceee">Cancel</h1>
+                    <h1 class="remove" style="background-color:#fc637c ;color:white;">Track</h1>
+                </div>
+                    </div>
+
+
+
+<button class="btn">Continue Shopping ></button>
+
+    </div>
+
+
+
+
+</div>
+ <!----------------FOOTER------------------------>
+
+
+<!-- delete the added product -->
+
+
+<script>
+
+    function deleteproduct(event) {
+                event.querySelector(".cartproduct");
+            }
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

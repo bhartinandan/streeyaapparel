@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 10px;
+}
+.comment{
+    display: flex;
+}
+.logo{
+    width: 20rem;
+    height: 5rem;
+  }
+  .feedback{
+    background-color: #EBE8E7;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: .3rem;  
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+p{
+font-size: 1.5rem;
+    margin-left: 1rem;
+}
+.comment{
+    margin-bottom: 1rem;
+}
+.lll textarea{
+    width: 90%;
+    height: 10rem;
+resize: vertical;
+padding: 1rem;
+margin-bottom: 2.5rem;
+}
+.btn{
+    margin-right: 2rem;
+}
+.cartnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color:#EBE8E7;
+  
+  }
+  .cartnav a{
+    position: absolute;
+  right: 0;
+  top: 65rem;
+  margin: 2rem;
+  }
+
+
+.buttons{
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+  
+@media (max-width:435px) {
+
+    html{
+       font-size: 8px;
+    }   
+    .cartnav a{
+     position: absolute;
+   right: 0;
+   top: 65rem;
+   margin: 2rem;
+   }   
+   
+   
+   
+   
+   .btn {
+     font-size: 1.2rem;
+     background: black;
+     margin-top: 2rem;
+     transition: ease-in-out .3s;
+     width: auto;
+     text-align: center;
+     color: white;
+     text-decoration: none;
+     padding: 1.3rem;
+     border-radius: 2rem;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   
+   }
+   
+   
+   
+   
+   
+   
+   
+   @media (max-width:360px) {
+   
+       html{
+          font-size: 7px;
+       }   
+   
+       .cartnav a{
+         position: absolute;
+       right: 0;
+       top: 70rem;
+       margin: 2rem;
+       }   
+           
+       
+       
+       
+       .btn {
+         font-size: 1.2rem;
+         background: black;
+         margin-top: 2rem;
+         transition: ease-in-out .3s;
+         width: auto;
+         text-align: center;
+         color: white;
+         text-decoration: none;
+         padding: 1.3rem;
+         border-radius: 2rem;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+   
+   
+   
+   
+   
+     }
+   
+   
+      .btn {
+       background: black;
+       margin-top: 2rem;
+       transition: ease-in-out .3s;
+       width: auto;
+       text-align: center;
+       color: white;
+       text-decoration: none;
+       padding: 1.3rem;
+       border-radius: 2rem;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   
+   .btn:hover {
+       color: white;
+       background-color: rgb(78, 78, 78);
+   }
+   
+   .jjs{
+     
+     margin-top: 3rem;
+     margin-left: 2rem;
+   }
+   .delivery-add{
+     margin-top: 1rem;
+     position: relative;
+     border-top: .03rem dashed gray;
+     border-bottom: .03rem dashed gray;
+     margin-right: 1rem;
+     margin-bottom: 1rem;
+     width: 100%;
+     height: auto;
+     padding: 1rem;
+   }
+   .col-div{
+     display: flex;
+     flex-wrap: wrap;
+   /* display: none; */
+   }
+   .alll{
+     margin-left: 2rem;
+   }
+   .delivery-add p{
+     padding: 0;
+     font-size: 1.3rem;
+     margin: 0;
+   }
+   .delivery-add button{
+     margin-top: 2rem;
+     border: none;
+     background-color: #EA7186;
+     color: white;
+     width: 100%;
+     height: 4.5rem;
+     border-radius: .3rem;
+   }
+   
+   .delivery-add button:hover{
+   cursor: pointer;
+   }
+   
+   @media (max-width:159px) {
+   
+     .cartnav a{
+       position: absolute;
+     right: 0;
+     top: 72rem;
+     margin: 2rem;
+     }   
+    
+     
+   }

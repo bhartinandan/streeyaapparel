@@ -1,0 +1,989 @@
+{% extends 'c_homebase.html' %}
+{% load static %}
+
+{%block content%}
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}"/>
+
+      <title>My_Website</title>
+
+<style>
+
+.pic-1{
+ box-shadow:   8.4px 4.2px 33.4px rgba(0, 0, 0, 0.081);
+    min-width: 10rem;
+    height: 10rem;
+    margin: 3rem;
+    background-color: #EA7186;
+    border-radius: 50%;
+}
+.one,.two,.three,.four,.five,.six{
+    text-align: center;
+    width:auto;
+background-color:blue;
+
+}
+.kkk{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+  text-align:center;
+  width:auto;
+  height:20rem;
+}
+.kkk p{
+    font-size:2rem;
+}
+body{
+    background-color:#FFF5FA;
+}
+.header{
+        background-color:#FFF5FA;
+}
+@font-face {
+    font-family: custom;
+    src: url(static/go.ttf);
+    }
+    .fa-xmark{
+    font-size: 3rem;
+    transform: rotate(0deg);
+}
+.search{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+.icon-nav ul{
+    background-color: #EA7186;
+    display: flex;
+}
+.search input:focus{
+    border-radius: 2.5rem;
+    background-color: #d3d3d3;
+    color: black;
+}
+
+.pic-1{
+    margin: 3rem;
+margin-bottom: 0rem;
+}
+.catogary{
+    height: auto;
+
+    justify-content: flex-start;
+}
+.catogary p{
+padding: .5rem;
+}
+
+    .for-sliding{
+        width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    overflow-x: auto;
+    }
+
+    .for-sliding img{
+    margin: 3rem;
+    margin-left:2rem;
+    min-width:35rem !important;
+    min-height:35rem !important;
+}
+
+.banner-img{
+    height:100%;
+    width: 100%;
+object-fit:cover;
+}
+.recommendation{
+    height:55rem;
+    width: 100%;
+    overflow-y: hidden;
+    margin: 3rem;
+    margin-top: 0;
+display: flex;
+justify-content:flex-start;
+align-items:center;
+overflow-x: auto;
+}
+.product-img
+{
+    background-size: 100% 100%;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow:   8.4px 4.2px 33.4px rgba(0, 0, 0, 0.081);
+    margin-top: 1rem;
+    transition: .5s;
+    min-width:30rem;
+    height: 40rem;
+}
+.product img {
+    min-width: 30rem;
+    height: 40rem;
+    background-size: 100% 100%;
+}
+.product p{
+    margin-right: 1rem;
+    font-size: 2.5rem;
+    color: black;
+}
+.pricings {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pricings span{
+    font-size: 2rem;
+}
+
+
+
+.container2{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.pop-up2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: none; /* change */
+    z-index: 1;
+}
+
+
+.form-close2  .form-cls2{
+    font-size: 3.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+    font-family: custom;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    transform: rotate(45deg);
+}
+.form-cls2:hover{
+    cursor: pointer;
+}
+
+
+
+@media (max-width:828px) {
+
+ /* .head .search{
+    background-color: blueviolet;
+ } */
+ .head input{
+    margin-right: 3rem;
+ }
+}
+
+@media (max-width:770px) {
+
+    .head input{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:550px) {
+    .offer_banner_mobile-2{
+        width: 95vw;
+    }
+    .offer_banner_mobile{
+        width: 95vw;
+    }
+}
+
+@media (max-width:767px) {
+ .menu {background-color:#FFE2F2;}
+
+}
+
+@media (max-width:520px) {
+.slider2{
+    margin-top: 6rem;
+}
+    .slider2 .phoneimg img {
+
+        width: 95vw;
+        height: 83rem;
+        margin-bottom: -1rem;
+
+
+    }
+    .pic-1{
+        height: 14rem;
+        width: 14rem;
+    }
+    .one p{
+        font-size: 2.5rem;
+    }
+    /* <div class="one"><div ><img class="pic-1
+        " src="{{ele.img.url}}" alt=""></div><p>{{ele.name}}</p></div> */
+    .offer_banner_mobile-2{
+        width: 95vw;
+    }
+    .offer_banner_mobile{
+        width: 95vw;
+    }
+}
+
+
+@media (max-width:470px) {
+
+    .slider2 .phoneimg img {
+
+        width: 100vw;
+        height: 75rem;
+        margin-bottom: -5rem;
+
+    }
+.phoneimg{
+    margin-bottom: 3rem;
+}
+
+
+}
+.nav{
+    z-index: 50;
+}
+
+    .form-clser{
+        font-size: 3.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+    font-family: custom;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    transform: rotate(45deg);
+}
+
+.form-clser:hover{
+    cursor:grab;
+}
+
+.for-sliding img{
+    margin-right: 1rem;
+margin-left: 0rem;
+}
+
+.offer-deal img{
+    margin-left: 0rem;
+    margin-right: 1rem;
+    margin-top: 0;
+}
+.for-sliding img{
+
+    margin-left:1rem;
+    min-width:50rem;
+    min-height: 50rem;
+    background-size: cover 100% 100%;
+    margin-right: 1rem;
+margin-left: 0rem;
+
+}
+
+@media (max-width:440px) {
+}
+@media (max-width:412px) {
+
+}
+@media (max-width:330px) {
+
+}
+
+@media (max-width:380px) {
+
+}
+
+
+@media (max-width:279px) {
+    html{
+        font-size: 3.5px;
+    }
+
+}
+
+
+@media (max-width:250px) {
+    html{
+        font-size: 3.2px;
+    }
+
+
+
+}
+
+
+.main2 .offer-deal{
+background-color: none;}
+@media (max-width:665px) {
+
+    .footer {
+    width: 100%;
+    background: #d4d4d4;
+    font-size: 1.4rem;
+    font-family: custom;
+    font-weight: bolder;
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    padding: 6rem 0 2rem;
+display: flex;
+flex-direction: row;
+}
+
+.container2 {
+    color: black;
+    flex-wrap: wrap;
+ display: flex;
+ flex-direction: column;
+}
+
+.container2 hr{
+    display: none;
+}
+
+.container2 h3{
+    font-size: 3rem;
+}
+.container2 p{
+    font-size: 2.5rem;
+    padding: 1rem;
+    line-height: 3rem;
+}
+.container2 .col6 img {
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+.container2 .col6 li {
+    font-size: 2rem;
+    margin: 1rem;
+    line-height: 2rem;
+    list-style: none;
+}
+
+.container2 .applogo {
+    margin-top: 2rem;
+}
+
+.container2 .applogo img {
+    width: 14rem;
+}
+.container2 .fa-brands{
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+
+
+
+}
+
+
+
+@media (max-width:230px) {
+
+}
+
+
+
+
+/* for slide navigation */
+@media (max-width:910px) {
+       /* coopy  */
+       .MenuItems li{
+        padding-left: 2rem;
+        width: 100vw;
+        text-align: center;
+padding: 4rem;
+        height: 4rem;
+        border-bottom: 1px solid black;
+ font-size: 3rem;
+ text-align: center;
+ padding-top: 0;
+padding-bottom: 6rem;
+margin-top: 2rem;
+}
+
+/* copy here */
+.idname p{
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+/* here */
+}
+
+@media (max-width:595px) {
+
+
+    .slider2 .phoneimg img{
+    margin-top: 3rem !important;
+}
+
+}
+
+
+
+
+.slider2 .phoneimg img{
+    margin-top: 1rem;
+}
+.burger-line{
+    color:black;
+}
+</style>
+
+
+</head>
+
+<body>
+
+
+
+    <div class="head">
+
+
+
+
+
+
+
+
+
+
+ <header class="header" id="header">
+            <nav class="navbar container">
+               <a href="./index.html" style="color:#E46298;" class="brand">STREEYA</a>
+               <div class="burger" id="burger">
+                  <span style="background:black;" class="burger-line"></span>
+                  <span style="background:black;" class="burger-line"></span>
+                  <span style="background:black;" class="burger-line"></span>
+               </div>
+               <span class="overlay"></span>
+               <div class="menu" id="menu">
+                  <ul class="menu-inner">
+                     <li class="menu-item"><a class="menu-link" href="/">Home</a></li>
+                     <li class="menu-item"><a class="menu-link" href="/myorder">MyOrder</a></li>
+                     <li class="menu-item"><a class="menu-link" href="/aboutus">AboutUs</a></li>
+                     <li class="menu-item"><a style="color:#128C7E;" class="menu-link" href="https://wa.me/7319847865?text=Hii"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+                  </ul>
+               </div>
+               <span style="display: flex;color:#E46298;">
+                <i style="color:black;" class="fa-solid fa-magnifying-glass search-toggle"></i>
+                <i style="color:rgb(249, 66, 66);" class="fa-solid fa-heart myfont" onclick="location.href='/wishlist'"></i>
+                <i style="color:black;" class="fa-solid fa-cart-shopping myfont" onclick="location.href='/cart'"></i>
+                <i style="color:black;" class="fa-solid fa-user myfont" onclick="location.href='/userlogin'"></i></i>
+            </span>
+
+               <div style="background:#FFE2F2;" class="search-block">
+                  <form method='get' action='/search' class="search-form">
+                     <span>
+                      <i style="font-size:4rem" class="fa-solid fa-xmark  search-cancel"></i></span>
+                     <input style="background:#FFE2F2;" type="search" name="search" id='search' class="search-input" placeholder="Search here...">
+                  </form>
+               </div>
+            </nav>
+         </header>
+
+
+
+
+
+
+
+         <div  style="margin-top: 6.3rem;" class="containerr">
+            <div class="arrow arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+            <a href="/clickposter/{{item1.0.related_items}}"><img src="{{item1.0.img.url}}" alt=""></a>
+            <a href="/clickposter/{{item1.1.related_items}}"><img src="{{item1.1.img.url}}" alt=""></a>
+            <a href="/clickposter/{{item1.2.related_items}}"><img src="{{item1.2.img.url}}" alt=""></a>
+            <div class="arrow arrow-right"><i class="fas fa-chevron-circle-right"></i>
+            </div>
+            <div class="dots">
+              <div class="dot">
+                <i style="color:rgba(0, 0, 0, 0);" class="far fa-dot-circle"></i>
+              </div>
+              <div class="dot">
+                <i style="color:rgba(0, 0, 0, 0);" class="far fa-circle"></i>
+              </div>
+              <div class="dot">
+                <i style="color:rgba(0, 0, 0, 0);" class="far fa-circle"></i>
+              </div>
+            </div>
+          </div>
+
+
+
+        <div class="slider2">
+            <div onclick="location.href='/clickposter/{{item2.0.related_items}}'" class="phoneimg"><img src="{{item2.0.img.url}}" alt=""></div>
+            <div onclick="location.href='/clickposter/{{item2.1.related_items}}'" class="phoneimg"><img src="{{item2.1.img.url}}" alt=""></div>
+            <div onclick="location.href='/clickposter/{{item2.2.related_items}}'" class="phoneimg"><img src="{{item2.2.img.url}}" alt=""></div>
+
+        </div>
+
+        <div class="catogary">
+            {% for ele in item3 %}
+            <div onclick="location.href='/clickposter/{{ele.name}}'" class="kkk"><img  class="pic-1" src="{{ele.img.url}}" alt=""><p>{{ele.name}}</p></div>
+            {% endfor %}
+        </div>
+            </div>
+
+
+    <div class="main2">
+        <h1>Our Trending Products</h1>
+
+        <div class="featured_box">
+        <div class="for-sliding">
+            {% for ele in item4 %}
+            <img onclick="location.href='/clickposter/{{ele.related_items}}'" style="width:30rem;height:30rem;background: 100% 100%;"src="{{ele.img.url}}" alt="">
+            {% endfor %}
+            </div>
+
+        </div>
+        <h1>Hot Right Now</h1>
+        <div class="offer_banner">
+            <img onclick="location.href='/clickposter/{{item5.related_items}}'" class="banner-img" src="{{item5.img.url}}" alt="">
+        </div>
+        <div class="offer_banner_mobile">
+            <img onclick="location.href='/clickposter/{{item5.related_items}}'" class="banner-img" src="{{item7.img.url}}" alt="">
+        </div>
+        <h1>Deal You Don't Want to Miss</h1>
+        <div class="offer-deal">
+            {% for ele in item6 %}
+            <img onclick="location.href='/clickposter/{{ele.related_items}}'" class="offer-deal-1" src="{{ele.img.url}}" alt="">
+            {% endfor %}
+
+    </div>
+        <div class="offer_banner-2">
+            <img class="banner-img" onclick="location.href='/clickposter/{{item8.related_items}}'" src="{{item8.img.url}}" alt="">
+        </div>
+        <div class="offer_banner_mobile-2">
+            <img class="banner-img" onclick="location.href='/clickposter/{{item9.related_items}}'" src="{{item9.img.url}}" alt="">
+        </div>
+
+        <h1>Recommended For You</h1>
+        <div class="recommendation">
+
+            {% for ele in item10 %}
+            <div class="product">
+                <div class="product-img">
+                    {% if ele.item_id.sticker_value != 'None' %}
+                        <div class="discount"><p> {{ele.item_id.sticker_value}}</p></div>
+                    {% endif %}
+                            <a href="/product-detail/{{ele.item_id.id}}/{{ele.item_id.name}}"><img src="{{ele.img_id.img.url}}" alt=""></a>
+            </div>
+                <h2 style="font-family: 'Inder', sans-serif;  text-transform: lowercase;height:0rem;margin-bottom:2.5rem">{{ele.item_id.name}}</h2>
+                
+           <div style="height:0rem" class="pricings">
+            <p>₹ {{ele.item_id.offer_price}}</p>
+            <s><span style="text-decoration: line-through;">₹ {{ele.item_id.original_price}}</span></s>
+           </div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div  class="new-button"><button>View More</i></button></div>
+    </div>
+
+
+            </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+
+<script>
+    function pass(){
+    var a;
+    a=document.getElementById("mail").value;
+    document.getElementById("usernm").value= a;
+    }
+</script>
+
+
+
+
+
+    <script>
+        var aryan = document.getElementById("slider");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+        var btn4 = document.getElementById("btn4");
+        var body = document.body;
+        var box = document.body.querySelector('.box');
+        var heading = document.body.querySelector('.heading');
+
+        btn1.onclick = function() {
+            btn1.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            aryan.style.transform = "translateX(0px)";
+        }
+
+        btn2.onclick = function() {
+            aryan.style.transform = "translateX(-100vw)";
+            btn1.classList.remove("active");
+            btn2.classList.add("active");
+            btn3.classList.remove("active");
+        }
+        btn3.onclick = function() {
+            aryan.style.transform = "translateX(-200vw)";
+            btn3.classList.add("active");
+            btn2.classList.remove("active");
+            btn1.classList.remove("active");
+        }
+        btn4.onclick = function() {
+            aryan.style.transform = "translateX(-300vw)";
+            btn4.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            btn1.classList.remove("active");
+        }
+        setInterval(() => {
+            btn1.classList.add("active");
+            btn2.classList.remove("active");
+            btn3.classList.remove("active");
+            btn4.classList.remove("active");
+            aryan.style.transform = "translateX(0px)";
+        }, 3000);
+        setInterval(() => {
+            aryan.style.transform = "translateX(-100vw)";
+            btn1.classList.remove("active");
+            btn2.classList.add("active");
+            btn3.classList.remove("active");
+            btn4.classList.remove("active");
+        }, 6000);
+        setInterval(() => {
+            aryan.style.transform = "translateX(-200vw)";
+            btn3.classList.add("active");
+            btn2.classList.remove("active");
+            btn1.classList.remove("active");
+            btn4.classList.remove("active");
+        }, 9000);
+        setInterval(() => {
+            aryan.style.transform = "translateX(-300vw)";
+            btn3.classList.remove("active");
+            btn2.classList.remove("active");
+            btn1.classList.remove("active");
+            btn4.classList.add("active");
+        }, 12000);
+
+let w = window.innerWidth;
+let h = window.innerHeight;
+var aryan = document.getElementById("slider");
+
+
+
+
+if (w < 910) {
+     setInterval(() => {
+            aryan.style.transform = "none";
+        },000);
+
+        setInterval(() => {
+            aryan.style.transform = "none";
+        },4000);
+        setInterval(() => {
+            aryan.style.transform = "none";
+        },8000);
+        setInterval(() => {
+            aryan.style.transform = "none";
+        },12000);
+        setInterval(() => {
+            aryan.style.transform = "none";
+        }, 16000);
+
+    }
+
+        // pop up account
+
+        // pop up account
+
+    document.querySelector(".fa-user").addEventListener('click', function() {
+
+document.querySelector(".pop-up").style.display = 'flex';
+
+});
+
+document.querySelector(".form-close").addEventListener('click', function() {
+
+document.querySelector(".pop-up").style.display = 'none';
+document.querySelector("pop-up2").style.display='none';
+});
+
+
+//catogary dropdown
+
+
+// pop up LOGIN
+
+document.querySelector(".continue").addEventListener('click', function() {
+
+document.querySelector(".pop-up2").style.display = 'flex';
+document.querySelector(".pop-up").style.display = 'none'
+});
+
+document.querySelector(".form-close2").addEventListener('click', function() {
+
+document.querySelector(".pop-up2").style.display = 'none';
+
+});
+
+
+document.querySelector(".fa-user").addEventListener('click', function() {
+
+document.querySelector(".pop-up").style.display = 'flex';
+
+});
+
+document.querySelector(".form-close").addEventListener('click', function() {
+
+document.querySelector(".pop-up").style.display = 'none';
+
+});
+
+
+
+
+document.querySelector(".form-clser").addEventListener('click', function(){
+    document.querySelector(".pop-up").style.display = 'none';
+} );
+
+
+
+
+
+
+
+
+    </script>
+
+    <script type="text/javascript">
+        document.body.querySelector('.fa-bars').addEventListener('click', function() {
+            var menu = document.body.querySelector('.main-list>ul');
+            if (menu.style.display == 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        });
+        document.body.querySelector('.fa-square-xmark ').addEventListener('click',function(){
+            var menu = document.body.querySelector('.main-list>ul');
+            if (menu.style.display == 'flex') {
+                menu.style.display = 'none';
+            }
+        });
+    </script>
+<!-- searching -->
+
+    </script>
+
+<!-- mobile slider -->
+<script>
+    var aryan3 = document.getElementById("slider3");
+        var btn5 = document.getElementById("btn5");
+        var btn6 = document.getElementById("btn6");
+        var btn7 = document.getElementById("btn7");
+        var btn8 = document.getElementById("btn8");
+        var body = document.body;
+        var box2 = document.body.querySelector('.box2');
+        var heading = document.body.querySelector('.heading');
+
+        btn5.onclick = function() {
+            btn5.classList.add("active");
+            btn6.classList.remove("active");
+            btn7.classList.remove("active");
+            btn8.classList.remove("active");
+            aryan3.style.transform = "translateX(0px)";
+        }
+
+        btn6.onclick = function() {
+            aryan3.style.transform = "translateX(-100vw)";
+            btn5.classList.remove("active");
+            btn6.classList.add("active");
+            btn8.classList.remove("active");
+            btn7.classList.remove("active");
+        }
+        btn7.onclick = function() {
+            aryan3.style.transform = "translateX(-200vw)";
+            btn7.classList.add("active");
+            btn6.classList.remove("active");
+            btn8.classList.remove("active");
+            btn5.classList.remove("active");
+        }
+        btn8.onclick = function() {
+            aryan3.style.transform = "translateX(-300vw)";
+            btn8.classList.add("active");
+            btn6.classList.remove("active");
+            btn7.classList.remove("active");
+            btn5.classList.remove("active");
+        }
+        setInterval(() => {
+            btn5.classList.add("active");
+            btn6.classList.remove("active");
+            btn7.classList.remove("active");
+            btn8.classList.remove("active");
+            aryan3.style.transform = "translateX(0px)";
+        }, 3000);
+        setInterval(() => {
+            aryan3.style.transform = "translateX(-100vw)";
+            btn5.classList.remove("active");
+            btn6.classList.add("active");
+            btn7.classList.remove("active");
+            btn8.classList.remove("active");
+        }, 6000);
+        setInterval(() => {
+            aryan3.style.transform = "translateX(-200vw)";
+            btn7.classList.add("active");
+            btn6.classList.remove("active");
+            btn5.classList.remove("active");
+            btn8.classList.remove("active");
+        }, 9000);
+        setInterval(() => {
+            aryan3.style.transform = "translateX(-300vw)";
+            btn7.classList.remove("active");
+            btn6.classList.remove("active");
+            btn5.classList.remove("active");
+            btn8.classList.add("active");
+        }, 12000);
+
+
+        document.body.querySelector('.hari').addEventListener('click',function(){
+var congg=document.body.querySelector('.hari');
+congg.style.color = 'rgb(255, 59, 59)';
+});
+
+</script>
+
+</script>
+
+
+<script>
+    // Open and Close Navbar Menu
+const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const bgOverlay = document.querySelector(".overlay");
+
+if (burgerMenu && bgOverlay) {
+   burgerMenu.addEventListener("click", () => {
+      navbarMenu.classList.add("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
+
+   bgOverlay.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
+}
+
+// Close Navbar Menu on Links Click
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.remove("is-active");
+   });
+});
+
+// Open and Close Search Bar Toggle
+const searchBlock = document.querySelector(".search-block");
+const searchToggle = document.querySelector(".search-toggle");
+const searchCancel = document.querySelector(".search-cancel");
+
+if (searchToggle && searchCancel) {
+   searchToggle.addEventListener("click", () => {
+      searchBlock.classList.add("is-active");
+   });
+
+   searchCancel.addEventListener("click", () => {
+      searchBlock.classList.remove("is-active");
+   });
+}
+
+</script>
+
+<script>
+    const imgs = document.querySelectorAll(".containerr img");
+const dots = document.querySelectorAll(".dot i");
+const leftArrow = document.querySelector(".arrow-left");
+const rightArrow = document.querySelector(".arrow-right");
+
+let currentIndex = 0;
+let time = 5000; // default time for auto slideshow
+
+const defClass = (startPos, index) => {
+  for (let i = startPos; i < imgs.length; i++) {
+    imgs[i].style.display = "none";
+    dots[i].classList.remove("fa-dot-circle");
+    dots[i].classList.add("fa-circle");
+  }
+  imgs[index].style.display = "block";
+  dots[index].classList.add("fa-dot-circle");
+};
+
+defClass(1, 0);
+
+leftArrow.addEventListener("click", function(){
+  currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
+  defClass(0, currentIndex);
+});
+
+rightArrow.addEventListener("click", function(){
+  currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+  defClass(0, currentIndex);
+});
+
+const startAutoSlide = () => {
+  setInterval(() => {
+    currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+    defClass(0, currentIndex);
+  }, time);
+};
+
+startAutoSlide(); // Start the slideshow
+</script>
+
+</body>
+{%endblock content%}

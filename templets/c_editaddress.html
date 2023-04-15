@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'c_editaddress.css' %}"/>
+    <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> EditAddress</title>
+</head>
+<body>
+
+    <div class="cartnav">
+        <img src=""  class="logo" alt="">
+    </div>
+
+
+
+<div class="heading">
+
+
+
+<div  class="address">
+
+
+
+
+
+    <div class="saved-address">
+        <h1>Edit address
+        </h1>
+
+
+<div style="display:flex;" class="write-address">
+    <form action="#" method="post">
+        {% csrf_token %}
+        <div class="inp">
+            <label for="Full name*">Full name*</label>
+            {{ form.name }}
+        </div>
+        <div class="inp">
+            <label for="Mobile">Mobile number*</label>
+            {{ form.mobile_number }}
+        </div>
+        <div class="inp">
+            <label for="Mobile">Alternate mobile number*</label>
+            {{ form.alternate_mobile_number }}
+        </div>
+        <div class="inp">
+            <label for="Pincode">House number*</label>
+            {{ form.hno }}
+        </div>
+        <div class="inp">
+            <label for="Address">Address*</label>
+            {{ form.area }}
+        </div>
+        <div class="inp">
+            <label for="Pincode">Pincode*</label>
+            {{ form.pin_code }}
+        </div>
+        <div class="inp">
+            <label for="Pincode">City*</label>
+            {{ form.city }}
+        </div>
+        <div class="inp">
+            <label for="Pincode">State*</label>
+            {{ form.state }}
+        </div>
+        <div class="inp">   
+            <label for="Pincode">Country*</label>
+            {{ form.country }}
+        </div>
+        
+    
+    </div>
+
+
+    <div class="add-default">
+        <button type="submit">Apply change</button>
+    </div>
+</form>
+
+</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<div class="orderplace">
+
+    <div class="placing"><button>CONTINUE</button></div>
+    </div>
+
+
+    <hr style="margin-top: 4rem;">
+
+
+
+
+    <div class="minifooter">
+   <div class="footnav">
+        <ul><a href=""><li>Home</li></a>
+            <a href=""><li>Contact us</li></a>
+                <a href=""><li>Privacy</li></a>
+        </ul>
+    </div>
+
+    <div class="term">    Terms© 2022 Niket_naam_bata.com. All Rights Reserved
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- delete the added product -->
+
+
+<script>
+document.body.querySelector('.add-more-address').addEventListener('click', function() {
+            var write_address = document.body.querySelector('.write-address');
+            if (write_address.style.display == 'none') {
+                write_address.style.display = 'flex';
+            } else {
+                write_address.style.display = 'flex';
+            }
+        });
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

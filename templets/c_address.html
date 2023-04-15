@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'c_address.css' %}"/>
+    <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Address</title>
+</head>
+<body>
+
+    <div class="cartnav">
+        <img src=""  class="logo" alt="">
+        <div class="fontlogo">
+        <i class="fa-solid fa-cart-shopping" ></i>
+
+        <i class="fa-solid fa-truck"></i>
+        <i class="fa-solid fa-credit-card"></i> </div>
+        <i class="fa-solid fa-user"></i>
+    </div>
+
+    <div class="mobile-cartnav">
+        <i class="fa-solid fa-circle-dot"><p>My Bag</p></i>
+        <div class="nav-line"></div>
+        <i class="fa-solid fa-map-location-dot"><p>Address</p></i>
+        <div class="nav-line2"></div>
+        <i class="fa-solid fa-indian-rupee-sign"><p>Payment</p></i>
+    </div>
+</div>
+
+
+
+<div class="heading">
+<div  class="address">
+    <div class="saved-address">
+        <h1>Where You Want To Deliver</h1>
+
+<div class="col-div">
+    {% for ele in data.item6 %}
+        <div class="delivery-add">
+            <i class="fa-solid fa-pen-to-square" onclick="location.href='/editaddress/{{ele.id}}'"></i>
+
+          <h2>Name: {{ele.name}}</h2>
+          <p>Contact: {{ele.contact}},{{ele.alternet_contact}}</p>
+          <p>{{ele.area}}</p>
+          <p>{{ele.city}},{{ele.state}}</p>
+          <p>{{ele.pin_code}},{{ele.country}} </p>
+         <div style="display:flex;" class="buttons">
+            <button>Deliver here </button>
+          <button onclick="location.href='/deleteaddress/{{ele.id}}'" style="border: .1px solid gray;
+          background-color: #ffffff;color:black;
+          ">Remove</button>
+
+         </div>
+
+        </div>
+    {% endfor %}
+</div>
+
+<div class="add-more-address">
+    <button class="add-more-address"><i class="fa-solid fa-circle-plus"></i>ADD NEW ADDRESS </button>
+</div>
+
+<div class="write-address">
+        <form action="/chooseaddress" method="post">
+            {% csrf_token %}
+            <div class="inp">
+                <label for="Full name*">Full name*</label>
+                {{ form.name }}
+            </div>
+            <div class="inp">
+                <label for="Mobile">Mobile number*</label>
+                {{ form.mobile_number }}
+            </div>
+            <div class="inp">
+                <label for="Mobile">Alternate mobile number*</label>
+                {{ form.alternate_mobile_number }}
+            </div>
+            <div class="inp">
+                <label for="Pincode">House number*</label>
+                {{ form.hno }}
+            </div>
+            <div class="inp">
+                <label for="Address">Address*</label>
+                {{ form.area }}
+            </div>
+            <div class="inp">
+                <label for="Pincode">Pincode*</label>
+                {{ form.pin_code }}
+            </div>
+            <div class="inp">
+                <label for="Pincode">City*</label>
+                {{ form.city }}
+            </div>
+            <div class="inp">
+                <label for="Pincode">State*</label>
+                {{ form.state }}
+            </div>
+            <div class="inp">   
+                <label for="Pincode">Country*</label>
+                {{ form.country }}
+            </div>
+            <div class="add-default">
+                <button type="submit">Add this address</button>
+            </div>
+        </form>
+</div>
+<div class="lll">
+</div>
+    </div>
+    </div>
+
+<div class="allinone">
+
+<div class="price-details">
+    <h6 style="margin-bottom:1rem;margin-left:0; margin-top:2rem;padding: 0;">Price Details</h6>
+    <div class="all-cal">
+
+
+
+    <div class="price-calculation">
+        <div class="pricing">
+    <div class="mention-price">
+        <p>Sub Total</p>
+        <p>Discount</p>
+        <p>Donation</p>
+        <h2 style="color:#EA7186;">Total</h2>
+    </div>
+    <div class="price-number">
+       <p> Rs. {{data.item2}}</p>
+       <p>- Rs. {{data.item4}}</p>
+       <p>Rs. 10</p>
+       <hr style="color:#EA7186;">
+       <h2 style="color:#EA7186;">Rs. {{data.item3}}</h2>
+    </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+<div class="orderplace">
+    <div class="placing"><button>CONTINUE</button></div>
+</div>
+
+
+    <hr style="margin-top: 4rem;">
+
+
+<script>
+document.body.querySelector('.add-more-address').addEventListener('click', function() {
+            var write_address = document.body.querySelector('.write-address');
+            if (write_address.style.display == 'none') {
+                write_address.style.display = 'flex';
+            } else {
+                write_address.style.display = 'flex';
+            }
+        });
+</script>
+
+
+</body>
+</html>

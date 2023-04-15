@@ -1,0 +1,347 @@
+{% extends 'c_homebase.html'%}
+{% load static %}
+{%block content%}
+<head>
+     {% load static %}
+    <meta charset="UTF-8">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<!--<link rel="stylesheet" href="myallproducts.css">-->
+ <link rel="stylesheet" href="{% static 'c_allproduct.css' %}">
+    <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>product</title>
+
+
+<style>
+body{
+      background-color: #FFF5FA;
+
+}
+
+
+@font-face {
+    font-family: custom;
+    src: url(static/go.ttf);
+    }
+
+.new-button{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container2{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.pop-up2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 1;
+}
+
+.form-close2  .form-cls2{
+    font-size: 3.5rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 0;
+    font-family: custom;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    transform: rotate(45deg);
+}
+.form-cls2:hover{
+    cursor: pointer;
+}
+
+
+.idname{
+    z-index: 1;
+}
+
+@media (max-width:910px){
+
+}
+
+h2{
+    height: 3rem;
+}
+.pricings{
+    padding-top:2rem ;
+}
+
+
+
+@media (max-width:665px) {
+
+.product h2{
+    font-size: 2.3rem;
+    height: 3rem;
+}
+.pricings{
+    padding-top:2.5rem ;
+}
+
+}
+
+
+
+@media (max-width:665px) {
+
+    .footer {
+    width: 100%;
+    background: #d4d4d4;
+    font-size: 1.4rem;
+    font-family: custom;
+    font-weight: bolder;
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    padding: 6rem 0 2rem;
+display: flex;
+flex-direction: row;
+}
+
+.container2 {
+    color: black;
+    flex-wrap: wrap;
+ display: flex;
+ flex-direction: column;
+}
+
+.container2 hr{
+    display: none;
+}
+
+.container2 h3{
+    font-size: 3rem;
+}
+.container2 p{
+    font-size: 2.5rem;
+    padding: 1rem;
+    line-height: 3rem;
+}
+.container2 .col6 img {
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+.container2 .col6 li {
+    font-size: 2rem;
+    margin: 1rem;
+    line-height: 2rem;
+    list-style: none;
+}
+
+.container2 .applogo {
+    margin-top: 2rem;
+}
+
+.container2 .applogo img {
+    width: 14rem;
+}
+.container2 .fa-brands{
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+
+
+
+}
+
+
+
+/* for slide navigation */
+
+
+@media (max-width:595px) {
+    /* coopy */
+
+
+}
+
+
+.product-img img{
+
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width:767px) {
+ .menu {background-color:#FFE2F2;}
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="head">
+
+
+
+      <header style=" background-color: #FFF5FA;" class="header" id="header">
+            <nav class="navbar container">
+               <a href="./index.html" class="brand">Brand</a>
+               <div class="burger" id="burger">
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+               </div>
+               <span class="overlay"></span>
+               <div  class="menu" id="menu">
+                  <ul class="menu-inner">
+                    <li class="menu-item"><a class="menu-link" href="/">Home</a></li>
+                     <li class="menu-item"><a class="menu-link" href="/aboutus">AboutUs</a></li>
+                     <li class="menu-item"><a class="menu-link" href="/myorder">My Order</a></li>
+                     <li class="menu-item"><a style="color:#128C7E;" class="menu-link" href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+   </ul>
+               </div>
+            <span style="display: flex;">
+                <i style="color:black;" class="fa-solid fa-magnifying-glass search-toggle"></i>
+                <i style="color:rgb(249, 66, 66);" class="fa-solid fa-heart myfont" onclick="location.href='/wishlist'"></i>
+                <i style="color:black;" class="fa-solid fa-cart-shopping myfont" onclick="location.href='/cart'"></i>
+                <i style="color:black;" class="fa-solid fa-user myfont" onclick="location.href='/userlogin'"></i></i>
+            </span>
+
+               <div style="background-color:#FFE2F2;" class="search-block">
+                <form method='get' action='/search' class="search-form">
+                     <span>
+                      <i class="fa-solid fa-xmark  search-cancel"></i></span>
+                     <input style="background-color:#FFE2F2;" type="search" name="search" class="search-input" placeholder="Search here...">
+                </form>
+               </div>
+            </nav>
+         </header>
+
+
+
+
+        <div class="product_display">
+
+    {% for ele in item %}
+                <div class="product">
+                    <div class="product-img">
+                        <div class="discount"><p>800% off</p></div>
+                        <a href="/product-detail/{{ele.item_id.id}}/{{ele.item_id.name}}">
+                        <img src="{{ele.img_id.img.url}}" alt=""></a>
+                    </div>
+                    <h2 style="font-family: 'Inder', sans-serif;  text-transform: lowercase;height:0rem;margin-bottom:2.5rem">{{ele.item_id.name}}</h2>
+                    <!-- <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div> -->
+
+                    <div  style="height:0rem;margin-bottom:3rem" class="pricings">
+                        <p>₹ {{ele.item_id.offer_price}}</p>
+                        <span style="text-decoration: line-through;">₹ {{ele.item_id.original_price}}</span>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+
+
+    <div class="new-button"><button>View More</button></div>
+        </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+    // Open and Close Navbar Menu
+const navbarMenu = document.getElementById("menu");
+const burgerMenu = document.getElementById("burger");
+const bgOverlay = document.querySelector(".overlay");
+
+if (burgerMenu && bgOverlay) {
+   burgerMenu.addEventListener("click", () => {
+      navbarMenu.classList.add("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
+
+   bgOverlay.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.toggle("is-active");
+   });
+}
+
+// Close Navbar Menu on Links Click
+document.querySelectorAll(".menu-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      navbarMenu.classList.remove("is-active");
+      bgOverlay.classList.remove("is-active");
+   });
+});
+
+// Open and Close Search Bar Toggle
+const searchBlock = document.querySelector(".search-block");
+const searchToggle = document.querySelector(".search-toggle");
+const searchCancel = document.querySelector(".search-cancel");
+
+if (searchToggle && searchCancel) {
+   searchToggle.addEventListener("click", () => {
+      searchBlock.classList.add("is-active");
+   });
+
+   searchCancel.addEventListener("click", () => {
+      searchBlock.classList.remove("is-active");
+   });
+}
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+{%endblock content%}
