@@ -163,6 +163,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
 
 
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [

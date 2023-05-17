@@ -3,22 +3,24 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="{% static 'c_cart.css' %}"/>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'c_cart.css' %}">
     <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Cart-Section</title>
 </head>
-<body>
 
+<body>
+   
     <div class="cartnav">
-        <img src="logo2.png"  class="logo" alt="">
+        <h1>Streeya</h1>
         <div class="fontlogo">
         <i class="fa-solid fa-cart-shopping" ></i>
-
+        
         <i class="fa-solid fa-truck"></i>
         <i class="fa-solid fa-credit-card"></i> </div>
         <i class="fa-solid fa-user"></i>
@@ -40,34 +42,32 @@
         {% for ele in item1 %}
         <div class="cartproduct">
             <img onclick="location.href='/product-detail/{{ele.item_id.id}}/{{ele.item_id.name}}'" src="{{ele.item_trend_id.img_id.img.url}}" alt="">
-
-
-            <div class="patana">
-                <h2>{{ele.item_trend_id.img_id.item_id.name}}</h2>
-            <div class="cart-product-detail">
-            <div class="cartdetail">
-
-                <h2>color: <span>Blue</span></h2>
-        <h2>Size: {{ele.item_size.size_id.size}}</h2>
+           
             
-            <h2>Qty:{{ele.item_qty}}</h2>
-        </div>
-        </div>
+            <div class="patana">
+                <p><span >{{ele.item_trend_id.img_id.item_id.name}}</span></p>
+                <div class="cart-product-detail">
+                    <div class="cartdetail">
+                        <p>Color: <span>Blue</span></p>
+                <p>Size:<span> {{ele.item_size.size_id.size}}</span></p>
+                    <p>Qty. <span>{{ele.item_qty}}</span>   <a href="">edit</a></p>
+                </div>
+                </div>
+
         <div class="pricio">
-            <h1 class="priceee">₹ {{ele.item_trend_id.img_id.item_id.original_price}} <s style="font-size: 3xrem;color: #fc637c;">₹ {{ele.item_trend_id.img_id.item_id.offer_price}}</s></h1>
-            <h1 class="remove" style="background-color:#ec0128 ;color:white;">Remove</h1>
+            <h1 class="priceee">₹ {{ele.item_trend_id.img_id.item_id.original_price}} <s style="font-size: 1rem;color: #fc637c;">₹ {{ele.item_trend_id.img_id.item_id.offer_price}}</s></h1>
+            <h1 onclick="location.href='/delcartitem/{{ele.id}}'" class="remove" style="background-color:#fc637c ;color:white;">Remove</h1>
         </div>
             </div>
+            
+        <h4>Rs. {{ele.item_trend_id.img_id.item_id.original_price}}</span> <s style="font-size: 1rem;color: #fc637c;">₹ {{ele.item_trend_id.img_id.item_id.offer_price}}</s></h4> 
 
-        <h4><span style="color: #000000;">₹ {{ele.item_trend_id.img_id.item_id.original_price}}</span> <s style="font-size: 1rem;color: #fc637c;">₹ {{ele.item_trend_id.img_id.item_id.offer_price}}</s></h4>
-
-        <i class="fa-solid fa-trash" onclick="location.href='/delcartitem/{{ele.id}}'"></i>
+        <i class="fa-solid fa-trash" onclick="location.href='/delcartitem/{{ele.id}}'"></i>       
+    </div>
+    {% endfor %}
     </div>
 
-    {% endfor %}
-</div>
-
-
+    
 <div class="price-details">
 <h1>Price Details</h1>
 <div class="all-cal">
@@ -78,11 +78,11 @@
 </div>
 
 <form method="post">{% csrf_token %}
-    <div class="add-coupon">
-    <h2><i class="fa-solid fa-circle-plus"></i> Enter Coupon Code</h2>
-    <input type="text" name="code">
-    <button type="submit">Apply</button>
-    </div>
+<div class="add-coupon">
+<h2><i class="fa-solid fa-circle-plus"></i> Enter Coupon Code</h2>
+<input type="text" name="code">
+<button type="submit">Apply</button>
+</div>
 </form>
 
 <div class="price-calculation">
@@ -108,22 +108,18 @@
 
 </div>
 
-    <div class="orderplace">
-    <div class="ordering">Rs. {{item3}}</div>
-    <div class="placing" onclick="location.href='/chooseaddress';">
-        <button>Place Order</button>
-    </div>
+<div class="orderplace">
+<div class="ordering">Rs. {{item3}}</div>
+<div class="placing" onclick="location.href='/chooseaddress';"><button>Place Order</button></div>
 </div>
   <!----------------FOOTER------------------------>
-
-
 
 
 <!-- delete the added product -->
 
 
 <script>
-
+    
     function deleteproduct(event) {
                 event.querySelector(".cartproduct");
             }
@@ -135,6 +131,6 @@
 
 
 
-<p></p>
+
 </body>
 </html>

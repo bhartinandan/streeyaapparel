@@ -5,14 +5,28 @@
   <meta charset="utf-8">
   <title>Online Fashion Store - Online Shopping Site for women in India</title>
   <link rel="shortcut icon" type="image/png" href="{% static 's_logo.png' %}">
+  <style>
+ .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+  </style>
 
 </head>
 
 <body>
-  {%block content%}
+    <div class="image-container">
+  <img src="{{image.img.url}}" alt="">
+</div>
 
-  {%endblock content%}
-  {% include "c_footer.html" %}
 </body>
 
 

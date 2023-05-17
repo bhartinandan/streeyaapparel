@@ -122,20 +122,66 @@ def userlogout(request):
     logout(request)
     return redirect("/")
 
+def send_otp(mail_mobile):
+    # subject = 'Blugi Otp'
+    # body = "password is Bharti#12"
+
+    # em = EmailMessage()
+    # em['From'] = email_sender
+    # em['To'] = email_receiver
+    # em['Subject'] = subject
+    # em.set_content(body)
+
+    # # Add SSL (layer of security)
+    # context = ssl.create_default_context()
+
+    # # Log in and send the email
+    # with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+    #     smtp.login(email_sender, email_password)
+    #     smtp.sendmail(email_sender, email_receiver, em.as_string())
+
+    return 
+
 def usersignup(request):
+    form = forms.SignupuserForm()
+    message = ''
+    if request.method == "POST":
+        form = forms.SignupuserForm(request.POST)
+        if form.is_valid():
+            user_id=form.cleaned_data['username']
+            user_exists = User.objects.filter(username=user_id).first()
+            if user_exists is not None:
+                message = f'Username already exists!'
+            else:
+                request.session['user_id']=user_id
+                send_otp(user_id)
+                return redirect("/enterotp")
     return render(request,
-                  "c_signup_username.html")
+                  "c_signup_username.html",
+                  context={'form': form,
+                 'message': message})
 
 def enterotp(request):
+    form = forms.UserotpForm()
+    message = ''
+    if request.method == "POST":
+        form = forms.UserotpForm(request.POST)
+        if form.is_valid():
+            user_id=form.cleaned_data['username']
+            user_exists = User.objects.filter(user=user_id).first()
+            if user_exists is not None:
+                message = f'Username already exists!'
+            else:
+                request.session['user_id']=user_id
+                return redirect("/enterotp")
     return render(request,
-                  "c_signup_otp.html")
+                  "c_signup_otp.html",
+                  context={'form': form,
+                 'message': message})
 
 def enterpassword(request):
     return render(request,
                   "c_signup_password.html")
-
-
-
 
 def product(request):
     item = ItemTrend.objects.order_by('-count')
@@ -143,6 +189,10 @@ def product(request):
     return render(request,
                   "c_allproduct.html",
                   {'item':item})
+
+def profile(request):
+    return render(request,
+                  "c_profile.html")
 
 def searchMatch(query, item):
     querys=query.split(" ")
@@ -255,27 +305,27 @@ def track_order(request):
                   "c_ordertracking.html")
 
 def product_def(request,id,nam):
-    # print(id)
-    # item1=Image.objects.filter(item_id=id).all()
-    # item2 = ItemTrend.objects.order_by('-count')[:5]
-    # # item3=Item_colors.objects.filter(item_uid_first=id).all()
-    # item4=[]
-    # for i in item3:
-    #     print(i.item_uid_second.id)
-    #     item4.append(ItemTrend.objects.filter(item_id=i.item_uid_second.id).first())
+    print(id)
+    item1=Image.objects.filter(item_id=id).all()
+    item2 = ItemTrend.objects.order_by('-count')[:5]
+    
 
+    # item5 = Review.objects.filter(item_id=id).all()
+    item6 = ItemTrend.objects.filter(item_id=id).first()
+    var=item6.count
+    item6.count=var+1
+    item6.save()
+    print(item6.id)
+    item7 = ItemDetail.objects.filter(item_id=id).all()
+    item8 = ItemTrend.objects.filter(item_id__product_code__product_id=item6.item_id.product_code.product_id).all()
+    print(item8)
 
-    # # item5 = Review.objects.filter(item_id=id).all()
-    # item6 = ItemTrend.objects.filter(item_id=id).first()
-    # var=item6.count
-    # item6.count=var+1
-    # item6.save()
-    # print(item6.id)
-    # item7 = ItemDetail.objects.filter(item_id=id).all()
+    return render(request,"c_productdetail.html",{'item1':item1,'item2':item2,'item6':item6,'item7':item7,'item8':item8})
+    # return render(request,"c_productdetail.html")
 
-    # return render(request,"a_productdetail.html",{'item1':item1,'item2':item2,'item4':item4,'item5':item5,'item6':item6,'item7':item7})
-    return render(request,"c_productdetail.html")
-
+def image(request,id):
+    item1=Image.objects.filter(id=id).first()
+    return render(request,"c_zoom.html",{'image':item1})
 
 @login_required(login_url='/userlogin')
 def myorder(request):
@@ -294,7 +344,6 @@ def chooseaddress(request):
     form = forms.AddressForm()
     if request.method == "POST":
         form = forms.AddressForm(request.POST)
-        print(form.is_valid())
         if form.is_valid():
             obj=Address()
             obj.user=User.objects.filter(username=user).first()
@@ -351,8 +400,6 @@ def chooseaddress(request):
 
 @login_required(login_url='/userlogin')
 def edit_address(request,id):
-    print("test")
-    print(id)
     user = request.user
     obj=Address.objects.filter(id=id,user=user).first()
     form = forms.AddressForm(initial={'name': obj.name,
@@ -394,7 +441,6 @@ def edit_address(request,id):
             obj.state=form.cleaned_data['state']
             obj.country=form.cleaned_data['country']
             obj.save()
-            print(form.cleaned_data['name'])
             response = redirect('/chooseaddress')
             return response
     return render(request,
@@ -413,30 +459,44 @@ def payment(request):
     return render(request,
                   "cstmr/payment.html")
 
+#####################################################
 ####################### ADMIN #######################
+#####################################################
+
 def is_staff(user):
     return user.groups.filter(name='STAFF').exists()
 
 @login_required(login_url='/stafflogin')
 @user_passes_test(is_staff)
+def staff_profile(request):
+    userid = request.user
+    user = User.objects.filter(username=userid).first()
+    data = StaffProfile.objects.filter(user=user).first()
+    return render(request,"a_profile.html",
+                  context={'data':data})
+
+@login_required(login_url='/stafflogin')
+@user_passes_test(is_staff)
 def mob_view_banner(request,id):
+    form=forms.MobViewBannerForm()
     if request.method == 'POST':
         obj = BannerImageMobile.objects.filter(id=id).first()
         pstrimg = request.POST.get('pstrimg')
         obj.img = pstrimg
         obj.save()
-        print("done2")
     response = redirect('/addposter')
     return response
 
 @login_required(login_url='/stafflogin')
 @user_passes_test(is_staff)
 def add_data(request):
+    form = forms.AddDataForm(initial={'sticker_value':'None'})
     Sub_cat=SubCategory.objects.all()
     Products=ProductId.objects.all()
     item2 = Type.objects.values('types').distinct()
     user=request.user.username
-    if request.method == 'POST':
+    if request.method == "POST":
+        form = forms.AddDataForm(request.POST)
         SubCat=request.POST.get('SubCat')
         subcat_var = SubCategory.objects.filter(sub_category=SubCat).first()
         tp=request.POST.get('Type')
@@ -789,10 +849,13 @@ def add_data(request):
                     obj4.count = 0
                     obj4.save()    
 
-        response = redirect('/add_data')
+        response = redirect('/add-data')
         return response
+    data={'sub_cat':Sub_cat,
+          'item2':item2,
+          'products':Products}
 
-    return render(request,"a_adddata.html",{'sub_cat':Sub_cat,'item2':item2,'products':Products})
+    return render(request,"a_adddata.html",context={'form': form,'data':data})
 
 
 #################changes needed #####################

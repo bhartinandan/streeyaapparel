@@ -105,6 +105,8 @@ class ProductId(models.Model):
     def __str__(self):
         return self.product_id
     
+
+    
 class Item(models.Model):
     item_unique_id = models.CharField(max_length=16, unique = True)
     name = models.CharField(max_length=150)
@@ -277,5 +279,26 @@ class Complaint(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_related')
     order_id = models.OneToOneField(Order, on_delete=models.CASCADE, related_name='order_number')
     compl_desc = models.TextField()
+
+class StaffProfile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    img = models.ImageField(upload_to="media")
+    staff_id = models.CharField(max_length=16)
+    name = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    pin_code = models.CharField(max_length=6)
+    area = models.TextField()
+    contact = models.CharField(max_length=15)
+    alternet_contact = models.CharField(max_length=15)
+    city = models.CharField(max_length=20)
+    state = models.CharField(max_length=20)
+    country = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
+
+
 
 

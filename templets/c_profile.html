@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="two.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'c_profile.css' %}"/>
+    <title>Account</title>
+</head>
+<body >
+    
+    
+    <div class='container'>
+    
+        <div class='avatar'>
+            <i class="fa-solid fa-circle-user"></i>
+            <h3>Hey! Aryan Kumar &#160 &#160<i class="fa-solid fa-pen-to-square"></i>
+            </h3>
+         </div>
+        <div class='username'>
+          <h1 style="font-family: Times New Roman"><span style="color:#c9264c;">Streeya</span></h1>
+        </div>
+        <div class='button' data-target='#home'>
+          <div class='button__icon'>
+            <i class="fa-solid fa-truck"></i>
+          </div>
+          <div class='button__text'>
+            Orders
+          </div>
+        </div>
+        <div class='button' data-target='#contact'>
+          <div class='button__icon'>
+            <i style="color:rgb(249, 66, 66);" class="fa-solid fa-heart"></i>
+          </div>
+          <div class='button__text' >
+            Wishlist
+          </div>
+        </div>
+        <div class='button' data-target='#about'>
+          <div class='button__icon'>
+            <i style="color:#FFD700;" class="fa-solid fa-coins"></i>
+          </div>
+          <div class='button__text'>
+            Coins
+          </div>
+        </div>
+        <div class='button' data-target='#education'>
+          <div class='button__icon'>
+            <i class="fa-solid fa-headphones"></i>
+          </div>
+          <div class='button__text'>
+            Help Center
+          </div>
+        </div>
+        <div class="logout">Log out</div>
+      </div>
+      <script>$(".button").on("click", function () {
+        $($(this).data("target")).addClass("page--active");
+    });
+    
+    $(".page__close").on("click", function () {
+        $(".page").removeClass("page--active");
+    });
+    </script>
+</body>
+</html>

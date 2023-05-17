@@ -22,10 +22,17 @@ urlpatterns = [
     path("editaddress/<id>",views.edit_address, name='editaddress'),
     path("deleteaddress/<id>",views.deleteaddress, name='deleteaddress'),
     path("product-detail/<id>/<str:nam>",views.product_def, name='product_detail'),
+    path("image/<id>",views.image, name='product_detail'),
+    path("profile",views.profile, name='profile'),
     #--------------------------------------------
-    path("logout",views.logout, name='logout'),
+    ###############################################################
+    ###################### ADMIN URLS #############################
+    ###############################################################
+    
     path("dashboard",views.dashboard, name='dashboard'),
-    path("add_data",views.add_data, name='add_data'),
+    path("staff-profile",views.staff_profile, name='staff-profile'),
+    path("logout",views.logout, name='logout'),
+    path("add-data",views.add_data, name='add-data'),
     path("adddatadetail/<id>",views.add_detail, name='add_data_detail'),
     path("deldatadetail/<int:id>/<int:id2>",views.del_detail, name='del_data_detail'),
     path("order_detail",views.order_detail, name='ord_det'),

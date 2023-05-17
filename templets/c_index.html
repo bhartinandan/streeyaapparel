@@ -4,31 +4,22 @@
 {%block content%}
 
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
-
-
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-      <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}"/>
-
-      <title>My_Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="{% static 'c_index.css' %}"/>
 
 <style>
 
 .pic-1{
- box-shadow:   8.4px 4.2px 33.4px rgba(0, 0, 0, 0.081);
+    box-shadow:   8.4px 4.2px 33.4px rgba(0, 0, 0, 0.081);
     min-width: 10rem;
     height: 10rem;
     margin: 3rem;
@@ -38,17 +29,16 @@
 .one,.two,.three,.four,.five,.six{
     text-align: center;
     width:auto;
-background-color:blue;
-
+    background-color:blue;
 }
 .kkk{
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-  text-align:center;
-  width:auto;
-  height:20rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    width:auto;
+    height:20rem;
 }
 .kkk p{
     font-size:2rem;
@@ -57,20 +47,20 @@ body{
     background-color:#FFF5FA;
 }
 .header{
-        background-color:#FFF5FA;
+    background-color:#FFF5FA;
 }
 @font-face {
     font-family: custom;
     src: url(static/go.ttf);
-    }
-    .fa-xmark{
+}
+.fa-xmark{
     font-size: 3rem;
     transform: rotate(0deg);
 }
 .search{
-display: flex;
-justify-content: flex-start;
-align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .icon-nav ul{
     background-color: #EA7186;
@@ -84,27 +74,26 @@ align-items: center;
 
 .pic-1{
     margin: 3rem;
-margin-bottom: 0rem;
+    margin-bottom: 0rem;
 }
 .catogary{
     height: auto;
-
     justify-content: flex-start;
 }
 .catogary p{
-padding: .5rem;
+    padding: .5rem;
 }
 
-    .for-sliding{
-        width: 100%;
+.for-sliding{
+    width: 100%;
     height:100%;
     display: flex;
     align-items: center;
     justify-content:flex-start;
     overflow-x: auto;
-    }
+}
 
-    .for-sliding img{
+.for-sliding img{
     margin: 3rem;
     margin-left:2rem;
     min-width:35rem !important;
@@ -114,7 +103,7 @@ padding: .5rem;
 .banner-img{
     height:100%;
     width: 100%;
-object-fit:cover;
+    object-fit:cover;
 }
 .recommendation{
     height:55rem;
@@ -122,13 +111,12 @@ object-fit:cover;
     overflow-y: hidden;
     margin: 3rem;
     margin-top: 0;
-display: flex;
-justify-content:flex-start;
-align-items:center;
-overflow-x: auto;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    overflow-x: auto;
 }
-.product-img
-{
+.product-img{
     background-size: 100% 100%;
     overflow: hidden;
     border-radius: .5rem;
@@ -149,7 +137,6 @@ overflow-x: auto;
     color: black;
 }
 .pricings {
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -157,12 +144,8 @@ overflow-x: auto;
 .pricings span{
     font-size: 2rem;
 }
-
-
-
 .container2{
     width: 100%;
-
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -211,8 +194,8 @@ overflow-x: auto;
 
 @media (max-width:770px) {
 
-    .head input{
-        font-size: 1.5rem;
+.head input{
+    font-size: 1.5rem;
     }
 }
 @media (max-width:550px) {
@@ -226,47 +209,40 @@ overflow-x: auto;
 
 @media (max-width:767px) {
  .menu {background-color:#FFE2F2;}
-
 }
 
 @media (max-width:520px) {
 .slider2{
     margin-top: 6rem;
 }
-    .slider2 .phoneimg img {
-
-        width: 95vw;
-        height: 83rem;
-        margin-bottom: -1rem;
-
-
-    }
-    .pic-1{
-        height: 14rem;
-        width: 14rem;
-    }
-    .one p{
-        font-size: 2.5rem;
-    }
+.slider2 .phoneimg img {
+    width: 95vw;
+    height: 83rem;
+    margin-bottom: -1rem;
+}
+.pic-1{
+    height: 14rem;
+    width: 14rem;
+}
+.one p{
+    font-size: 2.5rem;
+}
     /* <div class="one"><div ><img class="pic-1
         " src="{{ele.img.url}}" alt=""></div><p>{{ele.name}}</p></div> */
-    .offer_banner_mobile-2{
-        width: 95vw;
-    }
-    .offer_banner_mobile{
-        width: 95vw;
-    }
+.offer_banner_mobile-2{
+    width: 95vw;
+}
+.offer_banner_mobile{
+    width: 95vw;
+}
 }
 
 
 @media (max-width:470px) {
-
     .slider2 .phoneimg img {
-
         width: 100vw;
         height: 75rem;
         margin-bottom: -5rem;
-
     }
 .phoneimg{
     margin-bottom: 3rem;
@@ -278,8 +254,8 @@ overflow-x: auto;
     z-index: 50;
 }
 
-    .form-clser{
-        font-size: 3.5rem;
+.form-clser{
+    font-size: 3.5rem;
     position: absolute;
     right: 1.5rem;
     top: 0;
@@ -296,7 +272,7 @@ overflow-x: auto;
 
 .for-sliding img{
     margin-right: 1rem;
-margin-left: 0rem;
+    margin-left: 0rem;
 }
 
 .offer-deal img{
@@ -311,7 +287,7 @@ margin-left: 0rem;
     min-height: 50rem;
     background-size: cover 100% 100%;
     margin-right: 1rem;
-margin-left: 0rem;
+    margin-left: 0rem;
 
 }
 
@@ -360,8 +336,8 @@ background-color: none;}
     font-variant: small-caps;
     letter-spacing: .1rem;
     padding: 6rem 0 2rem;
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .container2 {
@@ -428,14 +404,14 @@ flex-direction: row;
         padding-left: 2rem;
         width: 100vw;
         text-align: center;
-padding: 4rem;
+    padding: 4rem;
         height: 4rem;
         border-bottom: 1px solid black;
- font-size: 3rem;
- text-align: center;
- padding-top: 0;
-padding-bottom: 6rem;
-margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 6rem;
+    margin-top: 2rem;
 }
 
 /* copy here */
@@ -470,23 +446,10 @@ margin-top: 2rem;
 </head>
 
 <body>
-
-
-
     <div class="head">
-
-
-
-
-
-
-
-
-
-
- <header class="header" id="header">
+        <header class="header" id="header">
             <nav class="navbar container">
-               <a href="./index.html" style="color:#E46298;" class="brand">STREEYA</a>
+               <a href="/" style="color:#c9264c;" class="brand"><h1 style="font-family: Times New Roman">STREEYA</h1></a>
                <div class="burger" id="burger">
                   <span style="background:black;" class="burger-line"></span>
                   <span style="background:black;" class="burger-line"></span>
@@ -505,7 +468,7 @@ margin-top: 2rem;
                 <i style="color:black;" class="fa-solid fa-magnifying-glass search-toggle"></i>
                 <i style="color:rgb(249, 66, 66);" class="fa-solid fa-heart myfont" onclick="location.href='/wishlist'"></i>
                 <i style="color:black;" class="fa-solid fa-cart-shopping myfont" onclick="location.href='/cart'"></i>
-                <i style="color:black;" class="fa-solid fa-user myfont" onclick="location.href='/userlogin'"></i></i>
+                <i style="color:black;" class="fa-solid fa-user myfont" onclick="location.href='/profile'"></i></i>
             </span>
 
                <div style="background:#FFE2F2;" class="search-block">
@@ -518,19 +481,14 @@ margin-top: 2rem;
             </nav>
          </header>
 
-
-
-
-
-
-
-         <div  style="margin-top: 6.3rem;" class="containerr">
+        <div  style="margin-top: 6.3rem;" class="containerr">
             <div class="arrow arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
-            <a href="/clickposter/{{item1.0.related_items}}"><img src="{{item1.0.img.url}}" alt=""></a>
-            <a href="/clickposter/{{item1.1.related_items}}"><img src="{{item1.1.img.url}}" alt=""></a>
-            <a href="/clickposter/{{item1.2.related_items}}"><img src="{{item1.2.img.url}}" alt=""></a>
-            <div class="arrow arrow-right"><i class="fas fa-chevron-circle-right"></i>
-            </div>
+                <a href="/clickposter/{{item1.0.related_items}}"><img src="{{item1.0.img.url}}" alt=""></a>
+                <a href="/clickposter/{{item1.1.related_items}}"><img src="{{item1.1.img.url}}" alt=""></a>
+                <a href="/clickposter/{{item1.2.related_items}}"><img src="{{item1.2.img.url}}" alt=""></a>
+                <div class="arrow arrow-right">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </div>
             <div class="dots">
               <div class="dot">
                 <i style="color:rgba(0, 0, 0, 0);" class="far fa-dot-circle"></i>
@@ -542,47 +500,44 @@ margin-top: 2rem;
                 <i style="color:rgba(0, 0, 0, 0);" class="far fa-circle"></i>
               </div>
             </div>
-          </div>
-
-
+        </div>
 
         <div class="slider2">
             <div onclick="location.href='/clickposter/{{item2.0.related_items}}'" class="phoneimg"><img src="{{item2.0.img.url}}" alt=""></div>
             <div onclick="location.href='/clickposter/{{item2.1.related_items}}'" class="phoneimg"><img src="{{item2.1.img.url}}" alt=""></div>
             <div onclick="location.href='/clickposter/{{item2.2.related_items}}'" class="phoneimg"><img src="{{item2.2.img.url}}" alt=""></div>
-
         </div>
 
         <div class="catogary">
             {% for ele in item3 %}
-            <div onclick="location.href='/clickposter/{{ele.name}}'" class="kkk"><img  class="pic-1" src="{{ele.img.url}}" alt=""><p>{{ele.name}}</p></div>
+            <div onclick="location.href='/clickposter/{{ele.name}}'" class="kkk">
+                <img  class="pic-1" src="{{ele.img.url}}" alt="">
+                <p>{{ele.name}}</p>
+            </div>
             {% endfor %}
         </div>
-            </div>
-
+        </div>
 
     <div class="main2">
-        <h1>Our Trending Products</h1>
-
+        <h1 style="font-family: Times New Roman">Our Trending Products</h1>
         <div class="featured_box">
-        <div class="for-sliding">
-            {% for ele in item4 %}
-            <img onclick="location.href='/clickposter/{{ele.related_items}}'" style="width:30rem;height:30rem;background: 100% 100%;"src="{{ele.img.url}}" alt="">
-            {% endfor %}
+            <div class="for-sliding">
+                {% for ele in item4 %}
+                    <img onclick="location.href='/clickposter/{{ele.related_items}}'" style="width:30rem;height:30rem;background: 100% 100%;"src="{{ele.img.url}}" alt="">
+                {% endfor %}
             </div>
-
         </div>
-        <h1>Hot Right Now</h1>
+        <h1 style="font-family: Times New Roman">Hot Right Now</h1>
         <div class="offer_banner">
             <img onclick="location.href='/clickposter/{{item5.related_items}}'" class="banner-img" src="{{item5.img.url}}" alt="">
         </div>
         <div class="offer_banner_mobile">
             <img onclick="location.href='/clickposter/{{item5.related_items}}'" class="banner-img" src="{{item7.img.url}}" alt="">
         </div>
-        <h1>Deal You Don't Want to Miss</h1>
+        <h1 style="font-family: Times New Roman">Deal You Don't Want to Miss</h1>
         <div class="offer-deal">
             {% for ele in item6 %}
-            <img onclick="location.href='/clickposter/{{ele.related_items}}'" class="offer-deal-1" src="{{ele.img.url}}" alt="">
+                <img onclick="location.href='/clickposter/{{ele.related_items}}'" class="offer-deal-1" src="{{ele.img.url}}" alt="">
             {% endfor %}
 
     </div>
@@ -593,59 +548,34 @@ margin-top: 2rem;
             <img class="banner-img" onclick="location.href='/clickposter/{{item9.related_items}}'" src="{{item9.img.url}}" alt="">
         </div>
 
-        <h1>Recommended For You</h1>
+        <h1 style="font-family: Times New Roman">Recommended For You</h1>
         <div class="recommendation">
-
             {% for ele in item10 %}
-            <div class="product">
-                <div class="product-img">
-                    {% if ele.item_id.sticker_value != 'None' %}
-                        <div class="discount"><p> {{ele.item_id.sticker_value}}</p></div>
-                    {% endif %}
-                            <a href="/product-detail/{{ele.item_id.id}}/{{ele.item_id.name}}"><img src="{{ele.img_id.img.url}}" alt=""></a>
-            </div>
-                <h2 style="font-family: 'Inder', sans-serif;  text-transform: lowercase;height:0rem;margin-bottom:2.5rem">{{ele.item_id.name}}</h2>
-                
-           <div style="height:0rem" class="pricings">
-            <p>₹ {{ele.item_id.offer_price}}</p>
-            <s><span style="text-decoration: line-through;">₹ {{ele.item_id.original_price}}</span></s>
-           </div>
-            </div>
+                <div class="product">
+                    <div class="product-img">
+                        {% if ele.item_id.sticker_value != 'None' %}
+                            <div class="discount">
+                                <p> {{ele.item_id.sticker_value}} </p>
+                            </div>
+                        {% endif %}
+                            <a href="/product-detail/{{ele.item_id.id}}/{{ele.item_id.name}}">
+                                <img src="{{ele.img_id.img.url}}" alt="">
+                            </a>
+                    </div>
+                    <h2 style="font-family: 'Inder', sans-serif;  text-transform: lowercase;height:0rem;margin-bottom:2.5rem">{{ele.item_id.name}}</h2>    
+                    <div style="height:0rem" class="pricings">
+                        <p>₹ {{ele.item_id.offer_price}}</p>
+                        <s><span style="text-decoration: line-through;">₹ {{ele.item_id.original_price}}</span></s>
+                    </div>
+                </div>
             {% endfor %}
-
-
-
-
-
-
-
-
-
-
         </div>
-        <div  class="new-button"><button>View More</i></button></div>
-    </div>
-
-
+            <div  class="new-button">
+                <button>View More</button>
             </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-          crossorigin="anonymous"></script>
-
-<script>
-    function pass(){
-    var a;
-    a=document.getElementById("mail").value;
-    document.getElementById("usernm").value= a;
-    }
-</script>
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
         var aryan = document.getElementById("slider");
         var btn1 = document.getElementById("btn1");
@@ -711,92 +641,86 @@ margin-top: 2rem;
             btn4.classList.add("active");
         }, 12000);
 
-let w = window.innerWidth;
-let h = window.innerHeight;
-var aryan = document.getElementById("slider");
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        var aryan = document.getElementById("slider");
 
 
 
 
-if (w < 910) {
-     setInterval(() => {
-            aryan.style.transform = "none";
-        },000);
+        if (w < 910) {
+            setInterval(() => {
+                    aryan.style.transform = "none";
+                },000);
 
-        setInterval(() => {
-            aryan.style.transform = "none";
-        },4000);
-        setInterval(() => {
-            aryan.style.transform = "none";
-        },8000);
-        setInterval(() => {
-            aryan.style.transform = "none";
-        },12000);
-        setInterval(() => {
-            aryan.style.transform = "none";
-        }, 16000);
+                setInterval(() => {
+                    aryan.style.transform = "none";
+                },4000);
+                setInterval(() => {
+                    aryan.style.transform = "none";
+                },8000);
+                setInterval(() => {
+                    aryan.style.transform = "none";
+                },12000);
+                setInterval(() => {
+                    aryan.style.transform = "none";
+                }, 16000);
 
-    }
+            }
 
-        // pop up account
+                // pop up account
 
-        // pop up account
+                // pop up account
 
-    document.querySelector(".fa-user").addEventListener('click', function() {
+            document.querySelector(".fa-user").addEventListener('click', function() {
 
-document.querySelector(".pop-up").style.display = 'flex';
+        document.querySelector(".pop-up").style.display = 'flex';
 
-});
+        });
 
-document.querySelector(".form-close").addEventListener('click', function() {
+        document.querySelector(".form-close").addEventListener('click', function() {
 
-document.querySelector(".pop-up").style.display = 'none';
-document.querySelector("pop-up2").style.display='none';
-});
-
-
-//catogary dropdown
+        document.querySelector(".pop-up").style.display = 'none';
+        document.querySelector("pop-up2").style.display='none';
+        });
 
 
-// pop up LOGIN
-
-document.querySelector(".continue").addEventListener('click', function() {
-
-document.querySelector(".pop-up2").style.display = 'flex';
-document.querySelector(".pop-up").style.display = 'none'
-});
-
-document.querySelector(".form-close2").addEventListener('click', function() {
-
-document.querySelector(".pop-up2").style.display = 'none';
-
-});
+        //catogary dropdown
 
 
-document.querySelector(".fa-user").addEventListener('click', function() {
+        // pop up LOGIN
 
-document.querySelector(".pop-up").style.display = 'flex';
+        document.querySelector(".continue").addEventListener('click', function() {
 
-});
+        document.querySelector(".pop-up2").style.display = 'flex';
+        document.querySelector(".pop-up").style.display = 'none'
+        });
 
-document.querySelector(".form-close").addEventListener('click', function() {
+        document.querySelector(".form-close2").addEventListener('click', function() {
 
-document.querySelector(".pop-up").style.display = 'none';
+        document.querySelector(".pop-up2").style.display = 'none';
 
-});
-
-
+        });
 
 
-document.querySelector(".form-clser").addEventListener('click', function(){
-    document.querySelector(".pop-up").style.display = 'none';
-} );
+        document.querySelector(".fa-user").addEventListener('click', function() {
+
+        document.querySelector(".pop-up").style.display = 'flex';
+
+        });
+
+        document.querySelector(".form-close").addEventListener('click', function() {
+
+        document.querySelector(".pop-up").style.display = 'none';
+
+        });
 
 
 
 
-
-
+        document.querySelector(".form-clser").addEventListener('click', function(){
+            document.querySelector(".pop-up").style.display = 'none';
+        } );
 
 
     </script>
@@ -817,173 +741,171 @@ document.querySelector(".form-clser").addEventListener('click', function(){
             }
         });
     </script>
-<!-- searching -->
+
+
+    
+
+<!-- mobile slider -->
+    <script>
+        var aryan3 = document.getElementById("slider3");
+            var btn5 = document.getElementById("btn5");
+            var btn6 = document.getElementById("btn6");
+            var btn7 = document.getElementById("btn7");
+            var btn8 = document.getElementById("btn8");
+            var body = document.body;
+            var box2 = document.body.querySelector('.box2');
+            var heading = document.body.querySelector('.heading');
+
+            btn5.onclick = function() {
+                btn5.classList.add("active");
+                btn6.classList.remove("active");
+                btn7.classList.remove("active");
+                btn8.classList.remove("active");
+                aryan3.style.transform = "translateX(0px)";
+            }
+
+            btn6.onclick = function() {
+                aryan3.style.transform = "translateX(-100vw)";
+                btn5.classList.remove("active");
+                btn6.classList.add("active");
+                btn8.classList.remove("active");
+                btn7.classList.remove("active");
+            }
+            btn7.onclick = function() {
+                aryan3.style.transform = "translateX(-200vw)";
+                btn7.classList.add("active");
+                btn6.classList.remove("active");
+                btn8.classList.remove("active");
+                btn5.classList.remove("active");
+            }
+            btn8.onclick = function() {
+                aryan3.style.transform = "translateX(-300vw)";
+                btn8.classList.add("active");
+                btn6.classList.remove("active");
+                btn7.classList.remove("active");
+                btn5.classList.remove("active");
+            }
+            setInterval(() => {
+                btn5.classList.add("active");
+                btn6.classList.remove("active");
+                btn7.classList.remove("active");
+                btn8.classList.remove("active");
+                aryan3.style.transform = "translateX(0px)";
+            }, 3000);
+            setInterval(() => {
+                aryan3.style.transform = "translateX(-100vw)";
+                btn5.classList.remove("active");
+                btn6.classList.add("active");
+                btn7.classList.remove("active");
+                btn8.classList.remove("active");
+            }, 6000);
+            setInterval(() => {
+                aryan3.style.transform = "translateX(-200vw)";
+                btn7.classList.add("active");
+                btn6.classList.remove("active");
+                btn5.classList.remove("active");
+                btn8.classList.remove("active");
+            }, 9000);
+            setInterval(() => {
+                aryan3.style.transform = "translateX(-300vw)";
+                btn7.classList.remove("active");
+                btn6.classList.remove("active");
+                btn5.classList.remove("active");
+                btn8.classList.add("active");
+            }, 12000);
+
+
+            document.body.querySelector('.hari').addEventListener('click',function(){
+                var congg=document.body.querySelector('.hari');
+                congg.style.color = 'rgb(255, 59, 59)';
+                });
 
     </script>
 
-<!-- mobile slider -->
-<script>
-    var aryan3 = document.getElementById("slider3");
-        var btn5 = document.getElementById("btn5");
-        var btn6 = document.getElementById("btn6");
-        var btn7 = document.getElementById("btn7");
-        var btn8 = document.getElementById("btn8");
-        var body = document.body;
-        var box2 = document.body.querySelector('.box2');
-        var heading = document.body.querySelector('.heading');
 
-        btn5.onclick = function() {
-            btn5.classList.add("active");
-            btn6.classList.remove("active");
-            btn7.classList.remove("active");
-            btn8.classList.remove("active");
-            aryan3.style.transform = "translateX(0px)";
+    <script>
+            // Open and Close Navbar Menu
+        const navbarMenu = document.getElementById("menu");
+        const burgerMenu = document.getElementById("burger");
+        const bgOverlay = document.querySelector(".overlay");
+
+        if (burgerMenu && bgOverlay) {
+        burgerMenu.addEventListener("click", () => {
+            navbarMenu.classList.add("is-active");
+            bgOverlay.classList.toggle("is-active");
+        });
+
+        bgOverlay.addEventListener("click", () => {
+            navbarMenu.classList.remove("is-active");
+            bgOverlay.classList.toggle("is-active");
+        });
         }
 
-        btn6.onclick = function() {
-            aryan3.style.transform = "translateX(-100vw)";
-            btn5.classList.remove("active");
-            btn6.classList.add("active");
-            btn8.classList.remove("active");
-            btn7.classList.remove("active");
+        // Close Navbar Menu on Links Click
+        document.querySelectorAll(".menu-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            navbarMenu.classList.remove("is-active");
+            bgOverlay.classList.remove("is-active");
+        });
+        });
+
+        // Open and Close Search Bar Toggle
+        const searchBlock = document.querySelector(".search-block");
+        const searchToggle = document.querySelector(".search-toggle");
+        const searchCancel = document.querySelector(".search-cancel");
+
+        if (searchToggle && searchCancel) {
+        searchToggle.addEventListener("click", () => {
+            searchBlock.classList.add("is-active");
+        });
+
+        searchCancel.addEventListener("click", () => {
+            searchBlock.classList.remove("is-active");
+        });
         }
-        btn7.onclick = function() {
-            aryan3.style.transform = "translateX(-200vw)";
-            btn7.classList.add("active");
-            btn6.classList.remove("active");
-            btn8.classList.remove("active");
-            btn5.classList.remove("active");
+
+    </script>
+
+    <script>
+        const imgs = document.querySelectorAll(".containerr img");
+        const dots = document.querySelectorAll(".dot i");
+        const leftArrow = document.querySelector(".arrow-left");
+        const rightArrow = document.querySelector(".arrow-right");
+
+        let currentIndex = 0;
+        let time = 5000; // default time for auto slideshow
+
+        const defClass = (startPos, index) => {
+        for (let i = startPos; i < imgs.length; i++) {
+            imgs[i].style.display = "none";
+            dots[i].classList.remove("fa-dot-circle");
+            dots[i].classList.add("fa-circle");
         }
-        btn8.onclick = function() {
-            aryan3.style.transform = "translateX(-300vw)";
-            btn8.classList.add("active");
-            btn6.classList.remove("active");
-            btn7.classList.remove("active");
-            btn5.classList.remove("active");
-        }
+        imgs[index].style.display = "block";
+        dots[index].classList.add("fa-dot-circle");
+        };
+
+        defClass(1, 0);
+
+        leftArrow.addEventListener("click", function(){
+        currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
+        defClass(0, currentIndex);
+        });
+
+        rightArrow.addEventListener("click", function(){
+        currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+        defClass(0, currentIndex);
+        });
+
+        const startAutoSlide = () => {
         setInterval(() => {
-            btn5.classList.add("active");
-            btn6.classList.remove("active");
-            btn7.classList.remove("active");
-            btn8.classList.remove("active");
-            aryan3.style.transform = "translateX(0px)";
-        }, 3000);
-        setInterval(() => {
-            aryan3.style.transform = "translateX(-100vw)";
-            btn5.classList.remove("active");
-            btn6.classList.add("active");
-            btn7.classList.remove("active");
-            btn8.classList.remove("active");
-        }, 6000);
-        setInterval(() => {
-            aryan3.style.transform = "translateX(-200vw)";
-            btn7.classList.add("active");
-            btn6.classList.remove("active");
-            btn5.classList.remove("active");
-            btn8.classList.remove("active");
-        }, 9000);
-        setInterval(() => {
-            aryan3.style.transform = "translateX(-300vw)";
-            btn7.classList.remove("active");
-            btn6.classList.remove("active");
-            btn5.classList.remove("active");
-            btn8.classList.add("active");
-        }, 12000);
+            currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
+            defClass(0, currentIndex);
+        }, time);
+        };
 
-
-        document.body.querySelector('.hari').addEventListener('click',function(){
-var congg=document.body.querySelector('.hari');
-congg.style.color = 'rgb(255, 59, 59)';
-});
-
-</script>
-
-</script>
-
-
-<script>
-    // Open and Close Navbar Menu
-const navbarMenu = document.getElementById("menu");
-const burgerMenu = document.getElementById("burger");
-const bgOverlay = document.querySelector(".overlay");
-
-if (burgerMenu && bgOverlay) {
-   burgerMenu.addEventListener("click", () => {
-      navbarMenu.classList.add("is-active");
-      bgOverlay.classList.toggle("is-active");
-   });
-
-   bgOverlay.addEventListener("click", () => {
-      navbarMenu.classList.remove("is-active");
-      bgOverlay.classList.toggle("is-active");
-   });
-}
-
-// Close Navbar Menu on Links Click
-document.querySelectorAll(".menu-link").forEach((link) => {
-   link.addEventListener("click", () => {
-      navbarMenu.classList.remove("is-active");
-      bgOverlay.classList.remove("is-active");
-   });
-});
-
-// Open and Close Search Bar Toggle
-const searchBlock = document.querySelector(".search-block");
-const searchToggle = document.querySelector(".search-toggle");
-const searchCancel = document.querySelector(".search-cancel");
-
-if (searchToggle && searchCancel) {
-   searchToggle.addEventListener("click", () => {
-      searchBlock.classList.add("is-active");
-   });
-
-   searchCancel.addEventListener("click", () => {
-      searchBlock.classList.remove("is-active");
-   });
-}
-
-</script>
-
-<script>
-    const imgs = document.querySelectorAll(".containerr img");
-const dots = document.querySelectorAll(".dot i");
-const leftArrow = document.querySelector(".arrow-left");
-const rightArrow = document.querySelector(".arrow-right");
-
-let currentIndex = 0;
-let time = 5000; // default time for auto slideshow
-
-const defClass = (startPos, index) => {
-  for (let i = startPos; i < imgs.length; i++) {
-    imgs[i].style.display = "none";
-    dots[i].classList.remove("fa-dot-circle");
-    dots[i].classList.add("fa-circle");
-  }
-  imgs[index].style.display = "block";
-  dots[index].classList.add("fa-dot-circle");
-};
-
-defClass(1, 0);
-
-leftArrow.addEventListener("click", function(){
-  currentIndex <= 0 ? currentIndex = imgs.length-1 : currentIndex--;
-  defClass(0, currentIndex);
-});
-
-rightArrow.addEventListener("click", function(){
-  currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
-  defClass(0, currentIndex);
-});
-
-const startAutoSlide = () => {
-  setInterval(() => {
-    currentIndex >= imgs.length-1 ? currentIndex = 0 : currentIndex++;
-    defClass(0, currentIndex);
-  }, time);
-};
-
-startAutoSlide(); // Start the slideshow
-</script>
+        startAutoSlide(); // Start the slideshow
+    </script>
 
 </body>
 {%endblock content%}

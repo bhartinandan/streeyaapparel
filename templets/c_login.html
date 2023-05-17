@@ -13,9 +13,9 @@
     <script src="https://kit.fontawesome.com/625e82c339.js" crossorigin="anonymous"></script>    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <meta name="viewport" 
+    <meta name="viewport" 
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
+    <link rel="shortcut icon" type="image/png" href="{% static 's_logo.png' %}">
     <title>login</title>
 
 <style>
@@ -38,8 +38,8 @@
             <div class="signin-signup">
               <form action="#" class="sign-in-form" method="post">
                 {% csrf_token %}
-                <img class="sinlogo" src="logo2.png" alt="">
-                <h2 class="title">Sign in</h2>
+                <h1 style="color:#c9264c; font-family: Times New Roman">STREEYA</h1>
+                <h2 class="title" style="font-family: Georgia" >Sign in</h2>
                 <p><span style="color:red">{{message}}</span></p>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
@@ -81,12 +81,12 @@
           <div class="panels-container">
             <div class="panel left-panel">
               <div class="content">
-                <h3>STREEYA</h3>
-                <p>
+                <h3 style="font-family: Times New Roman">STREEYA</h3>
+                <p style="font-family: Arial">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                   ex ratione. Aliquid!
                 </p>
-                <button class="btn transparent" id="sign-up-btn" onclick="location.href='/usersignup'">
+                <button class="btn transparent" id="sign-up-btn" onclick="location.href='/usersignup'" >
                   Sign up
                 </button>
               </div>
